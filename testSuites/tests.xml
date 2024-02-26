@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="MyFirstTestSuite">
+    <test name="UITests">
+        <classes>
+            <class name="gitlab.tests.LoginTest"/>
+            <class name="gitlab.tests.AddItemToBasket"/>
+        </classes>
+    </test>
+</suite>

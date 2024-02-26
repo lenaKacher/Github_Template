@@ -1,0 +1,1 @@
+{"uuid":"6db1b38c-41cf-45f9-aa1b-97f7ee1677bc","name":"gitlab.tests.LoginTest","children":["7b895c19-5a07-4c37-a22e-cb486c15b5ec"],"befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1707491014791,"stop":1707491026038}],"afters":[],"start":1707491014752,"stop":1707491079084}

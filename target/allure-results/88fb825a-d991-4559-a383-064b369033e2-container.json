@@ -1,0 +1,1 @@
+{"uuid":"88fb825a-d991-4559-a383-064b369033e2","name":"gitlab.tests.AddItemToBasket","children":["2e424768-a3de-4625-8152-84e09b8ff2e4"],"befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1707491045545,"stop":1707491053608}],"afters":[],"start":1707491014751,"stop":1707491079083}
