@@ -3,7 +3,6 @@ name: Maven_Build_Example
 env:
   JAVA_VERSION : "17"
   DISTRIBUTION : "zulu"
-  BROWSER: "chrome-remote"
   suiteXmlFile: "testSuites/tests.xml"
   LOGIN: "Waters"
   PASSWORD: "User135"
@@ -28,7 +27,7 @@ jobs:
         
     - name: Step 3 - Build with Maven
       run: |
-        mvn clean test -DdriverType="$browser" -DsuiteXmlFile="$suiteXmlFile" -Dlogin="$login" -Dpassword="$password"
+        mvn clean test -DsuiteXmlFile="$suiteXmlFile" -Dlogin="$login" -Dpassword="$password"
         mkdir staging && cp target/*.jar staging
 
     - name: Step 4 - Persist workflow data as artifacts
