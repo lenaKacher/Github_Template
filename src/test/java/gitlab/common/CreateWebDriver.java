@@ -66,7 +66,6 @@ public class CreateWebDriver {
         WebDriver aDriver;
         switch (pBrowserName.toUpperCase()) {
             case "CHROME":
-            default:
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--remote-allow-origins=*");
@@ -77,6 +76,7 @@ public class CreateWebDriver {
                 break;
 
             case "FIREFOX":
+            default:
                 WebDriverManager.firefoxdriver().setup();
                 System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, "/dev/null"); // disable unnecessary logs
                 aDriver = new FirefoxDriver();
