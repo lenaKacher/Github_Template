@@ -66,6 +66,7 @@ public class CreateWebDriver {
         WebDriver aDriver;
         switch (pBrowserName.toUpperCase()) {
             case "CHROME":
+            default:
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--remote-allow-origins=*");
@@ -82,7 +83,6 @@ public class CreateWebDriver {
                 break;
 
             case "CHROME-REMOTE":
-            default:
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.setCapability("browserName", "chrome");
                 chromeOptions.addArguments("--disable-dev-shm-usage");
