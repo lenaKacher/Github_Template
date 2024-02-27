@@ -8,7 +8,7 @@ public class Global_VARS {
 
     public static String login = System.getProperty("login", "Waters");
     public static String password = System.getProperty("password", "User135");
-    public static String aDriverType = System.getProperty("driverType", "FIREFOX");
+    public static String aDriverType = System.getProperty("driverType", "FIREFOX-REMOTE");
 
 
 }

@@ -76,7 +76,6 @@ public class CreateWebDriver {
                 break;
 
             case "FIREFOX":
-            default:
                 WebDriverManager.firefoxdriver().setup();
                 System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, "/dev/null"); // disable unnecessary logs
                 aDriver = new FirefoxDriver();
@@ -91,6 +90,7 @@ public class CreateWebDriver {
                 break;
 
             case "FIREFOX-REMOTE":
+            default:
                 FirefoxOptions firefoxOptions = new FirefoxOptions();
                 firefoxOptions.setCapability("browserName", "firefox");
                 System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, "/dev/null"); // disable unnecessary logs
