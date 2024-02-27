@@ -82,6 +82,7 @@ public class CreateWebDriver {
                 break;
 
             case "CHROME-REMOTE":
+            default:
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.setCapability("browserName", "chrome");
                 chromeOptions.addArguments("--disable-dev-shm-usage");
@@ -90,7 +91,6 @@ public class CreateWebDriver {
                 break;
 
             case "FIREFOX-REMOTE":
-            default:
                 FirefoxOptions firefoxOptions = new FirefoxOptions();
                 firefoxOptions.setCapability("browserName", "firefox");
                 System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, "/dev/null"); // disable unnecessary logs
