@@ -88,7 +88,6 @@ public class CreateWebDriver {
                 chromeOptions.addArguments("--disable-dev-shm-usage");
                 chromeOptions.addArguments("--no-sandbox");
                 chromeOptions.addArguments("--headless=new");
-                chromeOptions.addArguments("--disable-gpu", "--disable-infobars", "--ignore-certificate-errors","--disable-extensions", "--window-size=1920,1080", "--remote-allow-origins=*");
                 aDriver = new RemoteWebDriver(getRemoteHubUrl(), chromeOptions);
                 break;
 
