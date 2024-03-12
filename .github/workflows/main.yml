@@ -35,5 +35,5 @@ jobs:
     - name: Step 3 - Set up Selenium grid
       run: |
         ls
-        java -jar selenium-server-standalone-4.18.0.jar -role hub
+        java -jar selenium-server-4.18.0.jar -role hub
 
