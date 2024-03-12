@@ -21,17 +21,11 @@ jobs:
           - "4444:4444"
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-
-    - name: Set up Docker Compose
-      uses: docker/compose-cli@v0.7.0
-
     - name: Step 1 - Checkout master branch from Github
       uses: actions/checkout@v4
 
     - name: Set up Docker Compose
-      uses: docker/compose-cli@v0.7.0
+      uses: docker/compose-cli@v2.24.7
 
     - name: Build and run Docker Compose services
       run:  docker-compose up -d --build
@@ -47,14 +41,12 @@ jobs:
         mvn clean test -DsuiteXmlFile="$suiteXmlFile" -Dbrowser="CHROME-REMOTE" -Dlogin="$login" -Dpassword="$password"
         mkdir staging && cp target/*.jar staging
 
-    - name: Tear down Docker Compose services
-      run: |
-        docker compose down   
-
     - name: Step 4 - Persist workflow data as artifacts
       uses: actions/upload-artifact@v4
       with:
         name: github-actions-artifact
         path: staging
 
-
+    - name: Tear down Docker Compose services
+      run: |
+        docker compose down   
