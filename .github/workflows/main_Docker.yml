@@ -24,9 +24,6 @@ jobs:
     - name: Step 1 - Checkout master branch from Github
       uses: actions/checkout@v4
 
-    - name: Set up Docker Compose
-      uses: docker/compose-cli@v2.24.7
-
     - name: Build and run Docker Compose services
       run:  docker-compose up -d --build
 
