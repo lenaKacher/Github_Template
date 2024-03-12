@@ -87,7 +87,7 @@ public class CreateWebDriver {
                 chromeOptions.setCapability("browserName", "chrome");
                 chromeOptions.addArguments("--disable-dev-shm-usage");
                 chromeOptions.addArguments("--no-sandbox");
-                chromeOptions.addArguments("--headless=new");
+                chromeOptions.addArguments("--headless");
                 chromeOptions.addArguments("--enable-managed-downloads true");
                 aDriver = new RemoteWebDriver(getRemoteHubUrl(), chromeOptions);
                 break;
