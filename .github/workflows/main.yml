@@ -15,13 +15,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-  container:
-    image: node:19
+    container:
+      image: node:19
 
-  services:
-    selenium:
-      image: selenium/standalone-chrome:latest
-      options: --shm-size=2gb
+    services:
+      selenium:
+        image: selenium/standalone-chrome:latest
+        options: --shm-size=2gb
 
     steps:
     - name: Step 1 - Checkout master branch from Github
