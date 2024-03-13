@@ -50,7 +50,6 @@ public class HomePO extends BasePO {
     public void login(String userName, String password) {
         userNameField.sendKeys(userName);
         userPasswordField.sendKeys(password);
-
         waitForSelector(driver, By.id("sign_in_btn"), 10);
         signInBtn.click();
     }
