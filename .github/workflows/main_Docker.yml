@@ -30,7 +30,7 @@ jobs:
 
     - name: Step 3 - Build with Maven
       run: |
-        mvn clean test -DsuiteXmlFile="$suiteXmlFile" -Dbrowser="CHROME-REMOTE" -Dlogin="$login" -Dpassword="$password"
+        mvn clean test -DsuiteXmlFile="$suiteXmlFile" -Dbrowser="CHROME-REMOTE" -Dlogin=${{secrets.LOGIN}} -Dpassword=${{secrets.PASSWORD}}
         mkdir staging && cp target/*.jar staging
 
     - name: Step 4 - Persist workflow data as artifacts
