@@ -36,7 +36,7 @@ public class AddItemToBasket extends BaseTest {
         HomePO homePO = new HomePO();
         homePO.clickBasketBtn();
         BasketPO basketPO = new BasketPO();
-        Assert.assertEquals(basketPO.getNameofItem1(), "HP Z800 BLUETOOTH MOUSE");
+        Assert.assertEquals(basketPO.getNameofItem1(), "HP Z8000 BLUETOOTH MOUSE");
         Assert.assertEquals(basketPO.getNameofItem2(), "HP Z8000 BLUETOOTH MOUSE");
     }
 }
