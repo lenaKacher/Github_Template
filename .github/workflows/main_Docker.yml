@@ -4,7 +4,7 @@ env:
   DISTRIBUTION : "zulu"
   suiteXmlFile: "testSuites/tests.xml"
   login: "Waters"
-  password: "User123"
+  password: "User135"
 on: 
   push:
     branches:
