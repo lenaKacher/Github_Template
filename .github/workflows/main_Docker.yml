@@ -41,4 +41,4 @@ jobs:
 
     - name: Tear down Docker Compose services
       run: |
-        docker compose down   
+        docker compose down
