@@ -3,8 +3,8 @@ env:
   JAVA_VERSION : "17"
   DISTRIBUTION : "zulu"
   suiteXmlFile: "testSuites/tests.xml"
-  LOGIN: ${{secrets.LOGIN}}
-  PASSWORD: ${{secrets.PASSWORD}}
+  LOGIN: ${{ secrets.LOGIN }}
+  PASSWORD: ${{ secrets.PASSWORD }}
   BROWSER: "CHROME-REMOTE"
   URL: "https://www.advantageonlineshopping.com/#/"
 on:
