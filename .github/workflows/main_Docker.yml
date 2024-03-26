@@ -31,6 +31,8 @@ jobs:
 
     - name: Step 3 - Build with Maven
       run: |
+        echo $LOGIN
+        echo $PASSWORD
         mvn clean test -DsuiteXmlFile="$suiteXmlFile" -Dbrowser="$BROWSER" -Durl="$URL" -Dlogin="$LOGIN" -Dpassword="$PASSWORD" 
 
     - name: Tear down Docker Compose services
