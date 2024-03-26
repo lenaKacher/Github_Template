@@ -4,6 +4,8 @@ env:
   DISTRIBUTION : "zulu"
   suiteXmlFile: "testSuites/tests.xml"
   BROWSER: "CHROME-REMOTE"
+  LOGIN: "${{ secrets.LOGIN }}"
+  PASSWORD: "${{ secrets.PASSWORD }}"
   URL: "https://www.advantageonlineshopping.com/#/"
 on:
   push:
@@ -30,12 +32,12 @@ jobs:
 
     - name: Step 3 - secret variable
       run: |
-        echo "login is ${{ secrets.LOGIN }}"
-        echo "password is ${{ secrets.PASSWORD }}" 
+        echo "login is $LOGIN"
+        echo "password is $PASSWORD" 
 
     - name: Step 4 - Build with Maven
       run:
-        mvn clean test -DsuiteXmlFile="$suiteXmlFile" -Dbrowser="$BROWSER" -Durl="$URL" -Dlogin="${{ secrets.LOGIN }}" -Dpassword="${{ secrets.PASSWORD }}"
+        mvn clean test -DsuiteXmlFile="$suiteXmlFile" -Dbrowser="$BROWSER" -Durl="$URL" -Dlogin="$LOGIN" -Dpassword="$PASSWORD"
 
     - name: Tear down Docker Compose services
       run: |
