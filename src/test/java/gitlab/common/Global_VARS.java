@@ -8,6 +8,7 @@ public class Global_VARS {
 
     public static String login = System.getProperty("login", "Waters");
     public static String password = System.getProperty("password", "User135");
+    public static String url = System.getProperty("url", "https://www.advantageonlineshopping.com/#/");
     public static String aDriverType = System.getProperty("driverType", "CHROME-REMOTE");
 
 

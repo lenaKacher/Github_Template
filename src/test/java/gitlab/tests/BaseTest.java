@@ -25,7 +25,7 @@ public abstract class BaseTest {
         // Create the specific driver
         CreateWebDriver.getInstance().setWebDriver(Global_VARS.aDriverType);
         WebDriver aDriver = CreateWebDriver.getInstance().getWebDriver();
-        aDriver.get("https://www.advantageonlineshopping.com/#/");
+        aDriver.get(Global_VARS.url);
     }
 
     public File takeScreenshot(String methodName) throws IOException {
