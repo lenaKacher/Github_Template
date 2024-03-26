@@ -1,5 +1,4 @@
 name: Maven_Build_Example
-environment: test
 env:
   JAVA_VERSION : "17"
   DISTRIBUTION : "zulu"
@@ -14,6 +13,7 @@ on:
 jobs: 
   build:
     runs-on: ubuntu-latest
+    environment: test
 
     steps:
     - name: Step 1 - Checkout master branch from Github
