@@ -1,4 +1,5 @@
 name: Maven_Build_Example
+environment: test
 env:
   JAVA_VERSION : "17"
   DISTRIBUTION : "zulu"
@@ -31,8 +32,8 @@ jobs:
 
     - name: Step 3 - Build with Maven
       run: |
-        echo "${{ env.LOGIN }}"
-        echo "${{ env.PASSWORD }}"
+        echo "login is ${{ env.LOGIN }}"
+        echo "password is ${{ env.PASSWORD }}"
         mvn clean test -DsuiteXmlFile="$suiteXmlFile" -Dbrowser="$BROWSER" -Durl="$URL" -Dlogin="$LOGIN" -Dpassword="$PASSWORD" 
 
     - name: Tear down Docker Compose services
