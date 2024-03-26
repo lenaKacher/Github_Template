@@ -1,11 +1,9 @@
 name: Maven_Build_Example
-environment: test
+
 env:
   JAVA_VERSION : "17"
   DISTRIBUTION : "zulu"
   suiteXmlFile: "testSuites/tests.xml"
-  LOGIN: ${{ secrets.LOGIN }}
-  PASSWORD: ${{ secrets.PASSWORD }}
   BROWSER: "CHROME-REMOTE"
   URL: "https://www.advantageonlineshopping.com/#/"
 on:
@@ -32,8 +30,8 @@ jobs:
 
     - name: Step 3 - Build with Maven
       run: |
-        echo "login is ${{ env.LOGIN }}"
-        echo "password is ${{ env.PASSWORD }}"
+        echo "login is ${{ secrets.LOGIN }}"
+        echo "password is ${{ secrets.PASSWORD }}"
         mvn clean test -DsuiteXmlFile="$suiteXmlFile" -Dbrowser="$BROWSER" -Durl="$URL" -Dlogin="$LOGIN" -Dpassword="$PASSWORD" 
 
     - name: Tear down Docker Compose services
