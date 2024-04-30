@@ -3,9 +3,10 @@ name: Maven_Build_Example
 env:
   JAVA_VERSION : "17"
   DISTRIBUTION : "zulu"
+  browser: "CHROME-REMOTE"
   suiteXmlFile: "testSuites/tests.xml"
-  login: ${{secrets.LOGIN}}
-  password: ${{secrets.PASSWORD}}
+  login: ${{ secrets.LOGIN }}
+  password: ${{ secrets.PASSWORD }}
 on: 
   push:
     branches:
@@ -32,7 +33,7 @@ jobs:
 
     - name: Step 3 - Build with Maven
       run: |
-        mvn clean test -DsuiteXmlFile="$suiteXmlFile" -Dbrowser="CHROME-REMOTE" -Dlogin="$login" -Dpassword="$password"
+        mvn clean test -DsuiteXmlFile="$suiteXmlFile" -Dbrowser="$browser" -Dlogin="$login" -Dpassword="$password"
         mkdir staging && cp target/*.jar staging
 
     - name: Step 4 - Persist workflow data as artifacts
